@@ -1,9 +1,11 @@
 # BeamNG.DriveManager
 
-Ein Content Manager für BeamNG.drive, im Stil des Assetto Corsa Content Managers: Mods verwalten, Playlists, Quick Drive, Mod-Inspektor und BeamNG-Einstellungen an einem Ort.
+A content manager for BeamNG.drive in the style of the Assetto Corsa Content Manager: manage mods, playlists, Quick Drive, a mod inspector and the BeamNG settings, all in one place.
+
+Available in English, German, Russian, Chinese and Japanese. The tool follows your Windows language; you can change it under Settings → General.
 
 ## Download
 
-Die neueste Version gibt es unter **[Releases](../../releases/latest)**. Lade `BeamNG.DriveManager.exe` herunter und starte sie, eine Installation ist nicht nötig.
+Get the newest version from **[Releases](../../releases/latest)**. Download `BeamNG.DriveManager.exe` and start it, no installation needed.
 
-Neue Versionen meldet das Tool beim Start selbst und installiert sie mit einem Klick.
+The tool tells you about new versions on start and installs them with one click, or automatically if you turn that on in the settings.
