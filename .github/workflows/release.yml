@@ -1,0 +1,33 @@
+# Publishes the EXE on this branch as a GitHub release (tag v<version.txt>, title "Version <title.txt>").
+name: Release
+on:
+  push:
+    branches: [dist]
+permissions:
+  contents: write
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - name: Publish
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          VER=$(tr -d ' \r\n' < version.txt)
+          TITLE=$VER
+          [ -f title.txt ] && TITLE=$(tr -d ' \r\n' < title.txt)
+          if gh release view "v$VER" >/dev/null 2>&1; then
+            gh release upload "v$VER" BeamNG.DriveManager.exe --clobber
+          else
+            gh release create "v$VER" BeamNG.DriveManager.exe --target main \
+              --title "Version $TITLE" --notes-file notes.md --latest
+          fi
+          gh release edit "v$VER" --draft=false --latest --tag "v$VER" --target main \
+            --title "Version $TITLE" --notes-file notes.md
+          # keep the tag on the current main commit
+          MAIN=$(gh api "repos/$GITHUB_REPOSITORY/commits/main" --jq .sha)
+          gh api -X PATCH "repos/$GITHUB_REPOSITORY/git/refs/tags/v$VER" -f sha="$MAIN" -F force=true
+          gh release view "v$VER" --json isDraft,tagName,url

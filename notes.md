@@ -1,0 +1,68 @@
+- Quick Drive: the chosen vehicle, config, map and spawn point are remembered right away and are back after a restart; the vehicle shows its rating and notes like the map
+- Library: every folder in mods/unpacked now counts as its own mod, like in the game (before, the whole unpacked folder could become one mod and its mods were never scanned again); mods that no longer exist leave the library after "Rescan all mods"
+- Library: a mod exists only once: unpacking removes the ZIP, packing removes the folder; if both copies already exist you are asked which one replaces the other; pack and unpack errors now show a message instead of failing silently
+- Library: the action buttons under the details all share one look (icon and text); tiles show Skin, UI App and Sound badges instead of "Mod"
+- Library: mods downloaded through the game's repo now show their real title, author, version and repo pictures (read from the mod_info folder inside the ZIP); their beamng.com category decides the library category
+- Library: mods without any picture that are known on beamng.com get the icon of their repo page
+- Library: "Rescan all mods" now fixes wrongly detected categories (maps and vehicles that sat in "Other"); categories you picked yourself stay
+- Library: unpacked mods are easy to spot: orange "Unpacked" badge on tiles and list rows, a coloured state label in the details, and the pack button now says "Unpack" or "Pack as ZIP"
+- English, Russian, Chinese and Japanese: the green "AN" badge on active mods and other short labels (Unpacked/Packed, category and beamng.com tags) are now translated
+- Design 1: the blurred background picture and slideshow from Design 2 now work here too, with see-through panels; "No picture" in Settings > Background keeps the old look
+- Design 2 (Content Manager): the library is now see-through like Repo and Playlists, so the background shows behind lists, tiles and the detail panel
+- English, Russian, Chinese and Japanese: many texts that stayed German are now translated (combined lines, reports, ratings, playlist info); numbers, dates and the game's vehicle descriptions follow the chosen language
+- Fixed a crash when opening some mods in the library while the tool runs in English or another non-German language
+- A one-time notice on first start explains that the tool is experimental; Repo, Mod Inspector and Feeds carry their own experimental label
+- Repo: the "Favourite creators" tab and the creator's name fade in red when there is something new; "Subscribed repo mods" fades and counts while updates are available
+- The tray icon now shows the DriveManager icon instead of the plain Windows window icon
+- Playlists: partly active playlists get a dashed underline
+- Info shows the exact running build
+- Repo: notice that the Repo tab is experimental; the search index now reads beamng.com more slowly and much less often
+- Playlists: playlists that are active in the game get an underline in the accent colour; the label shows whether your selection is really active and which mods were switched on in the game on top
+- Playlists: ticked playlists are remembered after a restart
+- Settings > Tool > General: the overview (version, updates, stats) is now at the top, paths below
+- Library: the origin filter (All | Vanilla | Repo | External) is now a slider switch like Quick Drive's traffic switch; no empty line under the filter heading
+- Repo: new filter "Repo status" in all tabs – only mods with an update, with any tag or with one tag (Beta, Outdated …)
+- Repo: click the creator's name to see all their mods; save favourite creators and see their new mods and updates in the new "Favourite creators" tab
+- Size slider next to every list that zooms with Ctrl + mouse wheel (Library, Repo, Playlists, Quick Drive picker, config tiles)
+- Library: the advanced filter panel scrolls when the window is small; the buttons under a mod wrap into a second row
+- Library: new filter "Repo status" (Filter button) – show only mods with an update, with any tag, or with one tag such as Beta or Outdated
+- Library, Playlists and Quick Drive show the repo tag (Beta, ! Outdated …) and an update badge like the repo tab
+- Update check now also finds mods subscribed in the game (resource from BeamNG's mods/db.json), without extra page requests
+- Repo: screenshots of a mod now open large inside the tool instead of small in the browser
+- Repo: the search shows how many results there are (e.g. "60 of 312 results"); "+ Show more" shows the rest
+- Repo: the search index now reads every category, so really all mods are found (the first build takes a few minutes)
+- Repo: mod tags from the website are shown in colour; "Outdated" is red with a "!"
+- Repo: after installing a mod you can put it straight into a playlist (and activate it); "Show in library" jumps to installed mods
+- Repo search now covers the whole BeamNG repository: the tool builds its own search index in the background once (the website's search blocks programs), later it only adds what is new. A globe button opens the search on beamng.com
+- Repo: a gear next to the view buttons sets which category, sort order and view (list or tiles) "All repo mods" opens with
+- Drop-down menus have a new, cleaner look: rounded, with an arrow and a soft shadow
+- Fixed: ratings and notes of mods were lost after looking at one of the game's own vehicles or maps
+- Click the big preview picture to see it full screen with everything else dimmed; arrows or ← → go through the config pictures
+- The category picker is now small and sits under the config stats instead of taking a whole row
+- Installing a mod that is already there now compares both side by side (version, size, configs, date) and says whether the new one is newer, older or the same
+- Updates install themselves: press "Update" and the tool downloads the new version, replaces itself and restarts
+- Zooming pictures with Ctrl + mouse wheel no longer jumps to the top, shows black tiles or freezes the window
+- Quick Drive: the vehicle and map pickers zoom with Ctrl + mouse wheel and can filter by playlist, tag, rating, country, type and author
+- Quick Drive: "Show in Content tab" opens the chosen vehicle or map in the library for a closer look
+- You can now rate everything from 0 to 5 right under the title – rims for vehicles, roads for maps, stars for the rest (also the game's own vehicles and maps). Notes open from a small "Notes" button, their first line shows next to it
+- Map previews and spawn point pictures now follow the map's own info.json, the same way the game finds them (also for maps with loosely written info files)
+- BeamNG settings tab now reloads automatically when you close the game, so changes made in the game show up right away
+- The tool now speaks English, German, Russian, Chinese and Japanese – it follows the Windows language, changeable under Settings → General
+- New "Changelog" section in Settings: shows what changed with every update
+- When an update is available, the "Settings" tab glows red
+- New option "Install updates automatically" (Settings → General)
+- After an update the tool shows once what is new
+- Maps now show their own preview picture instead of a wrong one (installer and library)
+- Repo: when you install several mods, the playlist question now comes for every single mod
+- Repo: subscribed mods get their own gear defaults and filters, plus "Oldest updates first" to find very old mods
+- The version is now the build date plus a build number (e.g. 2026.10.26.B2); the update notice no longer shows on every start
+- Settings: shows the total size of your mods folder, and the page adapts to the window size
+- Button rows all over the tool wrap into a second line in small windows instead of being cut off
+- Spawn point pictures of maps show the spawn point's name
+- Quick Drive: rate the chosen map and write notes on it right under the map description
+- Quick Drive: traffic is a slider (as in the game, off, or 1–20 cars, coloured by amount) with a switch for driving, parked or both
+- Library: the tag input of a mod is no longer cut off at the bottom
+- 3D: the separate "3D view" is gone – the config editor shows the finished car: wheels the mod brings along, skins and liveries in the right place, paint with metallic, roughness and clearcoat
+- 3D: new display modes – with or without textures, grey, see-through, normals (flipped faces show red) and Beams & Nodes for the whole car or one part
+- 3D: a single .dae file now shows its textures too
+- Colours: 10 clearly different solid colours and 10 gradients, plus your own colour and your own gradient with a colour picker
